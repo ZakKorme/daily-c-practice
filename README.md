@@ -1,4 +1,4 @@
-#Daily C Practice
+#Daily_C_Practice
 
 **The following repo will be a collection of notes and files of my daily C practice**
 
