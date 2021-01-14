@@ -141,3 +141,36 @@
      a. statement that defines a function: name, return value type, and parameters
      b. provides all the external specifications for the function
      c. function prototypes generally appear at the beginning of a source file prior to the implementations of any functions or in a header file. Allows any of the functions in the file to call any function regardless of where you have placed the implementation of the functions
+
+## Day 3 - Character Strings
+
+1. We have learned about the char data type
+   - contains a single character, enclosed within a pair of single quotation marks
+2. String Constant or String Literal
+   - sequence of characters or symbols between a pair of double-quote characters
+   - strings in C are stored in an array of type char
+   - %s format specifier is for outputting a null-terminated string
+3. Null Character (NOT NULL)
+   - code value 0 is added to the end of each string to mark where it ends
+   - this character is known as the null character and you write it as \0
+   - string is always terminated by a null character, so the length of a string is always one greater than the number of characters in the string
+   - **ALWAYS INCREASE STRING SIZE BY ONE TO MAKE SPACE FOR NULL CHARACTER**
+4. Constant Strings
+   - using #define
+   - C90 added a seconday way to create symbolic constants
+   - using the const keyword to convert a declaration for a variable into a declaration for a constant
+   - enums are a third way to create symbolic constants
+5. Common String Functions: All of the following are included in <string.h>
+   - **strlen(str)**: length of a string
+   - **strncpy(destination, source, size of copy)**: copying one character string to another
+   - **strncar(value1, value2, size of copy)**: combining two character strings together, the first value is changed
+   - **strncmp()**: determining if two character strings are equal.
+     - 0: equal
+     - 1: value 1 is greater than value 2
+     - -1: value 1 is less than value 2
+   - **strchr(searchedStr, valueToBeSearched)**: searches a given string for a specified character and returns a pointer to the character in memory
+   - **strstr(searchedStr,valueToBeSearched)**: searches one string for the first occurrence of a substring and returns a pointer to the character in memory
+6. Converting String
+   - toupper(): converts from lowercase to uppercase
+   - tolower(): converts from uppercase to lowercase
+   - atof(): converts number of type string to number of type double
