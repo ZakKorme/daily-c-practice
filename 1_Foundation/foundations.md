@@ -1,0 +1,143 @@
+# Foundations
+
+## Day 1 - Basic Concepts
+
+1.  Multiline Comments (/** .... **/)
+2.  Single line Comments (//)
+3.  Preprocessor
+    - part of the C compilation process that recognizes special statements
+    - analyzes these statements before the analysis of the C program itself
+    - Identified with a # sign
+4.  Include Statement
+    - preprocessor directive/statement
+    - #include <stdio.h>
+    - includes a header file with the .h extension
+    - stdio is short for standard input/output
+5.  Header Files
+    - header files specify information that the compiler uses to integrate any predefined functions within a program
+    - header file names are case sensitive on some systems, so you should always write them in lowercase
+    - There are two ways to #include header files in a program:
+      1. Using angle brackets (#include <stdio.h>)
+      2. Using double quotes (#include "stdio.h")
+         - looks in current directory
+
+## Day 1 - Variables and Data Types
+
+1. Types of Data:
+   - **int**: contains integral values only (no decimals)
+   - **float**: contains floating-point numbers (decimals)
+   - **double**: same as the float, with roughly twice the precision.
+   - **char**: represent a single character, such as 'a', '6', or ';'.
+   - **\_Bool**: stores the values 0 and 1 (True(1)/False(0))
+   - **Enums**: defines a variable and specify the valid values that can be stored
+2. The difference between the types is in the amount of memory they occupy and the range of values they can hold
+3. C Offers three adjective keywords to modify the basic integer type
+   - **short**: uses less storage than an int, thus saving space when only small numbers are needed
+   - **long**: more storage than int, enabling you to express larger integer values.
+   - **unsigned**: used for variables that have only nonnegative values (positive). Will throw error if negative values are assigned
+4. Format Specifiers
+   - %d or %i: integer
+   - %f: float
+   - %e %g: double
+   - %c: char
+   - i%: bool
+
+## Day 1 - Operators
+
+1. Statements
+   - form the basic program steps of C, and most statements are constructed from expressions
+2. Expression
+   - consists of a combination of operators and operands
+3. Arithmetic Operators
+   - +: adds tow operands
+   - -: subtracts second operand from the first
+   - \*: multiples both operands
+   - /: divides numertor by de-numerator
+   - %: modulus operator and remainder after an integer division
+   - ++: increment operator increases the integer value by one
+   - --: decrement operator decreases the value by one
+4. Logical Operators
+   - &&: logical AND operator
+   - ||: logical OR operator
+   - !: logical NOT operator
+5. Assignment Operators
+   - =: simple assignment operators
+   - +=: add and assignment operator
+   - -=: subtract and assignment operator
+   - "\*=": multiply and assignment operator
+   - /=: divide and assignment operator
+   - %=: modulus and assignment operator
+   - <<=: left shift AND assignment operator
+   - ">>" =: right shift AND assignment operator
+   - &=: Bitwise exclusive AND assignment operator
+   - ^=: Bitwise exclusive OR and assignment operator
+   - |=: Bitwise inclusive OR and assignment operator
+6. Relational Operators
+   - ==: checks if values of two operands are equal or not
+   - !=: checks if the values of two operands are not equal.
+   - ">": checks if the value of the left is greater than the right
+   - "<": checks if the value of the right is greater than the left
+   - ">=": checks if the value of the left is greater than or equal to the value on the right
+   - "<=": checks if the value of the left is less than or equal to the value on the right
+7. Bitwise Operators
+
+   - operate on the bits in integer values
+   - uses &/| to test and set individual bits(8 bits in 1 byte) in an integer variable
+   - turn on/off bits with operators
+
+   - &: binary AND operator copies a bit to the result if it exists in both operands
+   - \: Binary OR operator copies a bit if it exists in either operand
+   - ^: Binary XOR operator copies the bit if it is set in one operand but not both
+   - ~: binary Ones complement operator is unary and has the effect of 'flipping' bits
+   - <<: binary left shift operator. The left operands value is moved left by the number of bits specified by the right operand
+   - ">>": Binary Right shift operator. The left operands value is moved right by the number of bits specified by the right operand
+
+8. Type Conversions
+   - The Cast Operator -> explicit type conversion
+   - The type cast operator has a higher precendence than all the arithmetic operators except the unary minus and unary plus
+   - **sizeof** operator return how many bytes are occupied in memory by a given type
+9. Operator Precendence
+   - determines the order of evaluation when two opereators share an operand
+
+## Day 1 - Control Flow
+
+1. Brackets are optional in C w/ if statements
+2. Switch statements must have brackets
+3. Goto Statement
+   - has two parts; the goto and a label name
+   - label is naed following the sam convention used in naming a variable
+4. Infinite Loop
+   - the condition for continuing the loop is absent, the loop will continue indefinitely
+   - sometimes useful for monitoring data or listening for connections
+
+## Day 2 - Arrays
+
+1. Array is a fixed number of data items that are all of the same type
+2. Declaration is: DataType name[size];
+3. We can initialize an array and assign values
+   - int counters[5] = {0, 1, 2, 3, 4 };
+4. Multidimensional Arrays
+   - initialization: int matrix[4][5];
+   - The first bracket corresponds to the rows
+   - The second bracket corresponds to the columns
+   - {
+     {0,1,2,3,4},
+     {0,1,2,3,4},
+     {0,1,2,3,4},
+     {0,1,2,3,4}
+     };
+   - As with 1D arrays, it is not required that the entire array be initialized
+5. Variable Length Arrays
+   - assigning a variable to the size property of an array
+
+## Day 3 - Functions
+
+1. Self contained unit of program code designed to accomplish a particular task
+   - Advantages: allows for divide and conquer, reduces code complexity
+2. Defining Functions
+   - if there are no statements in the body of a function, the return type must be void, and the function will not do anything
+   - the name of a function can be any **legal** name (same as variable)
+   - Function Prototype:
+     a. statement that defines a function: name, return value type, and parameters
+     b. provides all the external specifications for the function
+     c. function prototypes generally appear at the beginning of a source file prior to the implementations of any functions or in a header file. Allows any of the functions in the file to call any function regardless of where you have placed the implementation of the functions
