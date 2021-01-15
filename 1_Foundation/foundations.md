@@ -174,3 +174,22 @@
    - toupper(): converts from lowercase to uppercase
    - tolower(): converts from uppercase to lowercase
    - atof(): converts number of type string to number of type double
+
+## Day 3 - Debugging
+
+1. Always start with the FIRST error
+2. Common Problems
+   - Logic Errors
+   - Syntax Errors
+   - Memory Corruption
+   - Performance / Scalability
+   - Lack of Cohesion
+   - Tight Coupling (dependencies)
+3. Tracing using printf statements
+4. Call Stack
+   - a stack trace (call stack) is generated whenever your app crashes because of a fatal error
+5. Common C Mistakes
+   - Omitting prototype declarations
+   - Failing to include the header file
+   - Confusing a character constant and a character string
+   - Using the wrong bounds for an array (index 0 and extra location for null character)
