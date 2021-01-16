@@ -193,3 +193,30 @@
    - Failing to include the header file
    - Confusing a character constant and a character string
    - Using the wrong bounds for an array (index 0 and extra location for null character)
+
+## Day 5 - Pointers
+
+1. A pointer provides an indirect means of accessing the value of a particular data item
+   - a varaible whose vaule is a memory address
+   - its value is the address of another location in memory that can contain a value
+   - allows us to return multiple values from a function
+   - pointers provide direct memory access
+2. Operations on Pointers
+   - Assign Address
+   - Dereference (\*: vaule stored)
+   - Pointer Address
+   - Pointer Arithmetic
+   - Difference between two pointers
+   - Relational Operators to compare the vaules of two pointers
+3. **DO NOT DEREFERENCE AN UNINITIALIZED POINTER**
+4. We can use the const keyword when declaring a pointer to indicate that the **value pointed** to must not be changed
+   - const int \*pCount = &count
+5. We can also use the const keyword when indicating that the pointer always points to the same address
+   - int \*const pCount = &count
+6. Pointer of type void\* can contain the address of a data item of any type
+   - Cannot be derefernced directly
+   - the void pointer must first be explicitly cast to another pointer type before it is dereferenced
+7. Pointers and Arrays
+   - the address operator is not used
+   - when you define a pointer that is used to point to the elements of an array, you do not designate the pointer as type "pointer to array". You designate the pointer as pointing to the type of element that is contained in the array
+8.
